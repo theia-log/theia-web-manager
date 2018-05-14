@@ -1,0 +1,7 @@
+.application-header {
+    margin-top: 20px;
+}
+
+.application-header > h2.ui.center.aligned.header {
+    margin-top: 5px;
+}

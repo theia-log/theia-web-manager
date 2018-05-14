@@ -1,0 +1,32 @@
+.console {
+    height: 400px;
+    overflow: auto;
+    background: #fff;
+}
+
+.console > .console-message {
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    padding: 0 5px;
+}
+
+.console > .console-message > .console-marker {
+    font-weight: bold;
+    float: left;
+    font-size: 14px;
+    padding-right: 5px;
+}
+
+.console > .console-message > .console-date {
+    font-weight: bold;
+    float: left;
+    font-size: 14px;
+    padding-right: 5px;
+}
+
+.console > .console-message > .console-messsage {
+    float: left;
+    font-size: 14px;
+    padding-right: 5px;
+}
