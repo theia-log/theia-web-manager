@@ -11,13 +11,15 @@ class Console extends Component {
         trace: '#dc1414'
     };
 
+    lastMessage = null;
+
     state = {
         messageList: []
     };
     
     generateMessageList() {
         return this.state.messageList.map((message) => (
-            <div key={Math.random()} className="console-message">
+            <div key={Math.random()} ref={(ref) => this.lastMessage = ref} className="console-message">
                 <div style={{color: this.colorPalette[message.type]}} className="console-date">[{message.date}]</div>
                 <div className="console-marker">:</div>
                 <div className="console-message">{message.text}</div>
@@ -28,7 +30,9 @@ class Console extends Component {
     pushMessage(text = Math.random(), date = new Date().toString(), type = 'info') {
         let currentList = this.state.messageList;
         currentList.push({ date, type, text });
-        this.setState({ messageList: currentList });
+        this.setState({ messageList: currentList }, () => {
+            this.lastMessage.parentNode.scrollTop = this.lastMessage.offsetTop;
+        });
     }
 
     render() {
