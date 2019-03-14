@@ -1,9 +1,7 @@
 .console-emulator {
-    margin-top: 20px; 
-    padding: 0 5px 5px 5px;
-    border-radius: .28571429rem;
-    background: #f2f2f2;
-    border: solid 1px #dedede;
+    background: #202020;
+    border: solid 1px #000000;
+    display: flex;
 }
 
 .console-emulator > .title {
@@ -13,12 +11,19 @@
     height: 40px;
     line-height: 40px;
     font-size: 14px;
-    color: #2f2f2f;
+    color: #777777;
     padding: 0 5px;
     font-weight: bold;
 }
 
 .console-emulator > .console {
     width:100% !important;
-    border: solid 1px #e5e5e5;
+    border: solid 1px #000000;
+    background: #000000;
+    margin: auto;
+}
+
+.console-emulator > .console > .console-message {
+    background: #000000;
+    color: rgb(202, 202, 202);
 }

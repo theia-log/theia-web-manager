@@ -1,0 +1,8 @@
+html,body{
+    height: 100%;
+}
+#root .container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}

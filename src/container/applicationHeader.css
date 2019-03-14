@@ -1,7 +1,26 @@
-.application-header {
+/* .application-header {
     margin-top: 20px;
 }
+*/
+.application-header > .ui.center.aligned.header {
+    margin-bottom: 0px;
+    background: #202020;
+}
 
-.application-header > h2.ui.center.aligned.header {
-    margin-top: 5px;
+.application-header .ui.menu {
+    background: #202020;
+    color: #777777;
+}
+
+.application-header .ui.menu .item {
+    color: #777777;
+}
+
+.application-header .ui.menu .item:hover {
+    color: #fff;;
+}
+
+.application-header .ui.menu .item.active {
+    color:#fff;
+    background: #000000;
 }

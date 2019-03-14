@@ -20,23 +20,22 @@ class ApplicationHeader extends Component {
     render() {
         const { activeItem } = this.state;
         return (
-            <div className="application-header">
-                <Image centered src='/static/image/logo.png' size='tiny' />
-                <Header as='h2' icon textAlign='center'>
-                    Theia Web Manager
-                    <Header.Subheader>
-                        Manage your theia log agents.
-                    </Header.Subheader>
-                </Header>
-                <Menu pointing>
+            <div class="application-header">
+            <Header icon textAlign='center'>
+                <Menu>
+                    <Menu.Item name="logo">
+                        <Image centered src="/static/image/logo.png" size="mini"/>
+                    </Menu.Item>
                     <Menu.Item name='console' active={activeItem === 'console'} onClick={this.changeView} />
                     <Menu.Item name='agents' active={activeItem === 'agents'} onClick={this.changeView} />
                     <Menu.Menu position='right'>
                         <Menu.Item name='logout' active={activeItem === 'logout'} onClick={this.logout} />
                     </Menu.Menu>
                 </Menu>
+            </Header>
             </div>
         );
+
     }
 }
 
