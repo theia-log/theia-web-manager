@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './console.css';
+import { EventItem } from './EventItem';
 
 class Console extends Component {
     
@@ -19,11 +20,7 @@ class Console extends Component {
     
     generateMessageList() {
         return this.state.messageList.map((message) => (
-            <div key={Math.random()} ref={(ref) => this.lastMessage = ref} className="console-message">
-                <div style={{color: this.colorPalette[message.type]}} className="console-date">[{message.date}]</div>
-                <div className="console-marker">:</div>
-                <div className="console-message">{message.text}</div>
-            </div>
+            <EventItem id="PAJO" content={message}></EventItem>
         ));
     }
 
@@ -31,7 +28,7 @@ class Console extends Component {
         let currentList = this.state.messageList;
         currentList.push({ date, type, text });
         this.setState({ messageList: currentList }, () => {
-            this.lastMessage.parentNode.scrollTop = this.lastMessage.offsetTop;
+            //this.lastMessage.parentNode.scrollTop = this.lastMessage.offsetTop;
         });
     }
 
