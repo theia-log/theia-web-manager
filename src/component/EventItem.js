@@ -8,14 +8,14 @@ export class EventItem extends Component {
     }
 
     render () {
-        const {id, timestamp, source, tags, content} = this.state;
+        const {id, timestamp, source, tags, content} = this.props;
         return (
-            <div class="event-item">
-                <div class="event-id">{ id }</div>
-                <div class="event-timestamp">{ timestamp }</div>
-                <div class="event-source">{ source }</div>
-                <div class="event-tags">{ tags }</div>
-                <div class="event-content">{ content }</div>
+            <div className="event-item">
+                <div className="event-id">{ id }</div>
+                <div className="event-timestamp">{ timestamp }</div>
+                <div className="event-source">{ source }</div>
+                <div className="event-tags">{ tags }</div>
+                <div className="event-content">{ content }</div>
             </div>
         );
     }

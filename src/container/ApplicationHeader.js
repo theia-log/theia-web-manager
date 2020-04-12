@@ -20,7 +20,7 @@ class ApplicationHeader extends Component {
     render() {
         const { activeItem } = this.state;
         return (
-            <div class="application-header">
+            <div className="application-header">
             <Header icon textAlign='center'>
                 <Menu>
                     <Menu.Item name="logo">

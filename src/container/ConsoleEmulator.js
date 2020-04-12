@@ -9,7 +9,7 @@ class ConsoleEmulator extends Component {
 
     render() {
         setInterval(() => {
-            this.consoleRef.pushMessage();
+            //this.consoleRef.pushMessage();
         }, 5000);
         return (
             <div className="console-emulator">

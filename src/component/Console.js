@@ -15,13 +15,16 @@ class Console extends Component {
     lastMessage = null;
 
     state = {
-        messageList: []
+        messageList: [],
+        idSeq: 0,
     };
     
     generateMessageList() {
-        return this.state.messageList.map((message) => (
-            <EventItem id="PAJO" content={message}></EventItem>
-        ));
+        let idSeq = 0;
+        return this.state.messageList.map((message) => {
+            console.log(message)
+            return <EventItem id="PAJO" content={message.text} key={idSeq++}></EventItem>
+        });
     }
 
     pushMessage(text = Math.random(), date = new Date().toString(), type = 'info') {
@@ -33,6 +36,7 @@ class Console extends Component {
     }
 
     render() {
+        console.log(Console.prototype)
         return (
             <div className="console">
                 {this.generateMessageList()}
